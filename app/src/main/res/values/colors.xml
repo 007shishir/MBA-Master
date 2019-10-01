@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#58595B</color>
+    <color name="colorPrimaryDark">#414042</color>
+    <color name="colorAccent">#6D6E71</color>
+
+    <color name="homeBackground">#27AE60</color>
+    <color name="webDevBackground">#89009E</color>
+    <color name="microsoftTechBackground">#0079D6</color>
+    <color name="secondary_fragment_background">#00A198</color>
+    <color name="extra_knowledge">#AD6802</color>
+
+
+</resources>

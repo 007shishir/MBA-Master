@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mcqView">
+    <ScrollView
+        android:id="@+id/scrollView4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/mTxt_Header_topic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/mcq_topic_background"
+                    android:gravity="center"
+                    android:text="topic"
+                    android:textAlignment="center"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/mTxt_ID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/mcq_id_background"
+                        android:gravity="center"
+                        android:text="id"
+                        android:textAlignment="center"
+                        android:textColor="@color/common_google_signin_btn_text_dark_focused" />
+
+                    <TextView
+                        android:id="@+id/mTxt_level"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/mcq_card_status_background"
+                        android:gravity="center"
+                        android:text="primary"
+                        android:textAlignment="center"
+                        android:textColor="@color/common_google_signin_btn_text_dark_focused" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/mTxt_quest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/mcq_question_background"
+                android:gravity="center"
+                android:text="question"
+                android:textAlignment="center"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/mTxt_RIGHTvWRONG"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/mcq_answer_background"
+                        android:gravity="center"
+                        android:text="check"
+                        android:textAlignment="center"
+                        android:textColor="@color/common_google_signin_btn_text_dark_focused" />
+
+                    <TextView
+                        android:id="@+id/mTxt_ans"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/mcq_answer_background"
+                        android:gravity="center"
+                        android:text="answer"
+                        android:textAlignment="center"
+                        android:textColor="@color/common_google_signin_btn_text_dark_focused" />
+
+                    <TextView
+                        android:id="@+id/mTxt_PointEachQ"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/mcq_question_status_background"
+                        android:gravity="center"
+                        android:text="primary"
+                        android:textAlignment="center"
+                        android:textColor="@color/common_google_signin_btn_text_dark_focused" />
+
+                    <TextView
+                        android:id="@+id/mTxt_totalQ"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/mcq_answer_background"
+                        android:gravity="center"
+                        android:text="point"
+                        android:textAlignment="center"
+                        android:textColor="@color/common_google_signin_btn_text_dark_focused" />
+
+                    <TextView
+                        android:id="@+id/mTxt_cycle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/mcq_answer_background"
+                        android:gravity="center"
+                        android:text="Try"
+                        android:textAlignment="center"
+                        android:textColor="@color/common_google_signin_btn_text_dark_focused" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/mcq_option_background"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:id="@+id/mChkOpt1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="checkbox"
+                        android:textColor="@color/common_google_signin_btn_text_dark_focused" />
+
+                    <CheckBox
+                        android:id="@+id/mChkOpt2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="checkbox"
+                        android:textColor="@color/common_google_signin_btn_text_dark_focused" />
+
+                    <CheckBox
+                        android:id="@+id/mChkOpt3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="checkbox"
+                        android:textColor="@color/common_google_signin_btn_text_dark_focused" />
+
+                    <CheckBox
+                        android:id="@+id/mChkOpt4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="checkbox"
+                        android:textColor="@color/common_google_signin_btn_text_dark_focused" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_prev"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/mcq_previous_background" />
+
+                <Button
+                    android:id="@+id/mBtn_submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/mcq_submit_background"
+                    android:text="submit"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused" />
+
+                <Button
+                    android:id="@+id/btn_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/mcq_next_background" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/mTxt_Expl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/mcq_explanation_background"
+                android:gravity="center"
+                android:text="explanation"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_refresh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/mcq_answer_background"
+                    android:text="refresh"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused" />
+
+                <TextView
+                    android:id="@+id/mTxt_Qnumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/mcq_extra_text_background"
+                    android:gravity="center"
+                    android:text="random_text"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/mPrimary_Text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="primary_status"
+                        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                        android:textStyle="bold" />
+
+                    <ProgressBar
+                        android:id="@+id/progressPrimary"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:progressBackgroundTint="@color/colorPrimaryDark"
+                        android:progressTint="@android:color/holo_red_dark" />
+
+                    <TextView
+                        android:id="@+id/mLearning_Text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="learning_status"
+                        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                        android:textStyle="bold" />
+
+                    <ProgressBar
+                        android:id="@+id/progressLearning"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:indeterminate="false"
+                        android:progressBackgroundTint="@color/colorPrimaryDark"
+                        android:progressTint="@android:color/holo_orange_light" />
+
+                    <TextView
+                        android:id="@+id/mMaster_Text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="master_status"
+                        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                        android:textStyle="bold" />
+
+                    <ProgressBar
+                        android:id="@+id/progressMaster"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:progressBackgroundTint="@color/colorPrimaryDark"
+                        android:progressTint="@android:color/holo_green_dark" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.google.android.gms.ads.AdView
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/mADview1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                ads:adSize="SMART_BANNER"
+                ads:adUnitId="ca-app-pub-2522810443010389/7740905448" />
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/mADview2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:adSize="SMART_BANNER"
+                app:adUnitId="ca-app-pub-2522810443010389/3360583407" />
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/mADview3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:adSize="SMART_BANNER"
+                app:adUnitId="ca-app-pub-2522810443010389/6317811439" />
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/mADview4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:adSize="SMART_BANNER"
+                app:adUnitId="ca-app-pub-2522810443010389/8233528338" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/mPRone"
+        style="@android:style/Widget.DeviceDefault.Light.ProgressBar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.51" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

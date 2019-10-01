@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "816649416554",
+    "firebase_url": "https://mba-master-bdf52.firebaseio.com",
+    "project_id": "mba-master-bdf52",
+    "storage_bucket": "mba-master-bdf52.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:816649416554:android:339ad2ef2c4ac5e6517f13",
+        "android_client_info": {
+          "package_name": "com.saiful.mbamaster"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "816649416554-ijubdkbort10c9t2rvm5vk0mk84dbt1v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.saiful.mbamaster",
+            "certificate_hash": "b1e279bde19c46aa8f2c7e932ec31d50c9b45f5a"
+          }
+        },
+        {
+          "client_id": "816649416554-12mnsp4j1ngab4n14q5serot13su9kac.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDL2g3IGlQpCLLJWbcrqCDc7kK9tgQxS6s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "816649416554-12mnsp4j1ngab4n14q5serot13su9kac.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,3 @@
+converts your code snippets into pretty-printed HTML format
+
+http://hilite.me/

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.saiful.mbamaster.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+
+        <action
+            android:id="@+id/action_nav_home_to_frag_introduction_business"
+            app:destination="@id/frag_introduction_business" />
+        <action
+            android:id="@+id/action_nav_home_to_frag_business_communication"
+            app:destination="@id/frag_business_communication" />
+        <action
+            android:id="@+id/action_nav_home_to_frag_managerial_finance"
+            app:destination="@id/frag_managerial_finance" />
+        <action
+            android:id="@+id/action_nav_home_to_frag_fundamental_mis"
+            app:destination="@id/frag_fundamental_mis" />
+        <action
+            android:id="@+id/action_nav_home_to_frag_principle_of_management"
+            app:destination="@id/frag_principle_of_management" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_level2"
+        android:name="com.saiful.mbamaster.ui.gallery.Level2_Fragment"
+        android:label="@string/level2"
+        tools:layout="@layout/fragment_level_2" >
+        <action
+            android:id="@+id/action_nav_level2_to_operation_management"
+            app:destination="@id/operation_management" />
+        <action
+            android:id="@+id/action_nav_level2_to_business_statics"
+            app:destination="@id/business_statics" />
+        <action
+            android:id="@+id/action_nav_level2_to_supply_chain"
+            app:destination="@id/supply_chain" />
+        <action
+            android:id="@+id/action_nav_level2_to_mng_economics"
+            app:destination="@id/mng_economics" />
+        <action
+            android:id="@+id/action_nav_level2_to_mngt_science"
+            app:destination="@id/mngt_science" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_level3"
+        android:name="com.saiful.mbamaster.ui.slideshow.Level3"
+        android:label="Level 3"
+        tools:layout="@layout/fragment_level3" >
+
+        <action
+            android:id="@+id/action_nav_level3_to_frag_entrepreneurship"
+            app:destination="@id/frag_entrepreneurship" />
+        <action
+            android:id="@+id/action_nav_level3_to_frag_erp"
+            app:destination="@id/frag_erp" />
+        <action
+            android:id="@+id/action_nav_level3_to_frag_dss"
+            app:destination="@id/frag_dss" />
+        <action
+            android:id="@+id/action_nav_level3_to_frag_dbms"
+            app:destination="@id/frag_dbms" />
+        <action
+            android:id="@+id/action_nav_level3_to_frag_data_mining"
+            app:destination="@id/frag_data_mining" />
+        <action
+            android:id="@+id/action_nav_level3_to_frag_electric_commerce"
+            app:destination="@id/frag_electric_commerce" />
+    </fragment>
+    <fragment
+        android:id="@+id/frag_electric_commerce"
+        android:name="com.saiful.mbamaster.level3_frag.ElectricCommerce"
+        android:label="E-Commerce"
+        tools:layout="fragment_android__tutorial">
+
+        <action
+            android:id="@+id/action_frag_electric_commerce_to_memorise_recV"
+            app:destination="@id/memorise_recV" />
+    </fragment>
+    <fragment
+        android:id="@+id/frag_data_mining"
+        android:name="com.saiful.mbamaster.level3_frag.DataMining_WareHousing"
+        android:label="Data Mining"
+        tools:layout="fragment_android__tutorial">
+
+        <action
+            android:id="@+id/action_frag_data_mining_to_memorise_recV"
+            app:destination="@id/memorise_recV" />
+    </fragment>
+    <fragment
+        android:id="@+id/frag_dbms"
+        android:name="com.saiful.mbamaster.level3_frag.DBMS"
+        android:label="DBMS"
+        tools:layout="fragment_android__tutorial">
+
+        <action
+            android:id="@+id/action_frag_dbms_to_memorise_recV"
+            app:destination="@id/memorise_recV" />
+    </fragment>
+    <fragment
+        android:id="@+id/frag_dss"
+        android:name="com.saiful.mbamaster.level3_frag.DSS"
+        android:label="DSS"
+        tools:layout="fragment_android__tutorial">
+        <action
+            android:id="@+id/action_frag_dss_to_memorise_recV"
+            app:destination="@id/memorise_recV" />
+    </fragment>
+    <fragment
+        android:id="@+id/frag_erp"
+        android:name="com.saiful.mbamaster.level3_frag.ERP"
+        android:label="ERP"
+        tools:layout="fragment_android__tutorial">
+        <action
+            android:id="@+id/action_frag_erp_to_memorise_recV"
+            app:destination="@id/memorise_recV" />
+    </fragment>
+    <fragment
+        android:id="@+id/frag_entrepreneurship"
+        android:name="com.saiful.mbamaster.level3_frag.Entrepreneurship"
+        android:label="Entrepreneurship"
+        tools:layout="fragment_android__tutorial">
+        <action
+            android:id="@+id/action_frag_entrepreneurship_to_memorise_recV"
+            app:destination="@id/memorise_recV" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_extra_knowledge"
+        android:name="com.saiful.mbamaster.ui.tools.Extra_Knowledge"
+        android:label="@string/menu_tools"
+        tools:layout="@layout/fragment_extra_knowledge" >
+        <action
+            android:id="@+id/action_nav_extra_knowledge_to_ek_mcq_memorise_option"
+            app:destination="@id/ek_mcq_memorise_option" />
+    </fragment>
+    <fragment
+        android:id="@+id/ek_mcq_memorise_option"
+        android:name="com.saiful.mbamaster.ui.tools.EK_mcq_memorise_option"
+        android:label="Choose Option"
+        tools:layout="@layout/fragment_android__tutorial" />
+
+    <fragment
+        android:id="@+id/nav_share"
+        android:name="com.saiful.mbamaster.ui.share.ShareFragment"
+        android:label="@string/menu_share"
+        tools:layout="@layout/fragment_share" />
+
+    <fragment
+        android:id="@+id/nav_send"
+        android:name="com.saiful.mbamaster.ui.send.SendFragment"
+        android:label="@string/menu_send"
+        tools:layout="@layout/fragment_send" />
+    <fragment
+        android:id="@+id/frag_fundamental_mis"
+        android:name="com.saiful.mbamaster.home_tutorial_fragment.Fundamental_MIS"
+        android:label="@string/fundamental_mis"
+        tools:layout="@layout/fragment_android__tutorial" >
+
+        <action
+            android:id="@+id/action_frag_fundamental_mis_to_memorise_recV"
+            app:destination="@id/memorise_recV" />
+    </fragment>
+    <fragment
+        android:id="@+id/frag_principle_of_management"
+        android:name="com.saiful.mbamaster.home_tutorial_fragment.Principle_of_Management"
+        android:label="Principle of Management"
+        tools:layout="@layout/fragment_android__tutorial">
+
+        <action
+            android:id="@+id/action_frag_principle_of_management_to_memorise_recV"
+            app:destination="@id/memorise_recV" />
+    </fragment>
+    <fragment
+        android:id="@+id/frag_managerial_finance"
+        android:name="com.saiful.mbamaster.home_tutorial_fragment.Managerial_Finance"
+        android:label="Managerial Finance"
+        tools:layout="@layout/fragment_android__tutorial">
+
+        <action
+            android:id="@+id/action_frag_managerial_finance_to_memorise_recV"
+            app:destination="@id/memorise_recV" />
+    </fragment>
+    <fragment
+        android:id="@+id/frag_business_communication"
+        android:name="com.saiful.mbamaster.home_tutorial_fragment.Business_Communication"
+        android:label="BusCom"
+        tools:layout="@layout/fragment_android__tutorial">
+
+        <action
+            android:id="@+id/action_frag_business_communication_to_memorise_recV"
+            app:destination="@id/memorise_recV" />
+    </fragment>
+    <fragment
+        android:id="@+id/frag_introduction_business"
+        android:name="com.saiful.mbamaster.home_tutorial_fragment.Introduction_Business"
+        android:label="Intro of Business"
+        tools:layout="@layout/fragment_android__tutorial">
+
+        <action
+            android:id="@+id/action_frag_introduction_business_to_memorise_recV"
+            app:destination="@id/memorise_recV" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mngt_science"
+        android:name="com.saiful.mbamaster.level2_fragment.MngtScience"
+        android:label="Mngt Science"
+        tools:layout="@layout/fragment_android__tutorial">
+
+        <action
+            android:id="@+id/action_mngt_science_to_memorise_recV"
+            app:destination="@id/memorise_recV" />
+    </fragment>
+    <fragment
+        android:id="@+id/mng_economics"
+        android:name="com.saiful.mbamaster.level2_fragment.MngEconomics_fragment"
+        android:label="Managerial Economics"
+        tools:layout="@layout/fragment_android__tutorial">
+
+        <action
+            android:id="@+id/action_mng_economics_to_memorise_recV"
+            app:destination="@id/memorise_recV" />
+    </fragment>
+    <fragment
+        android:id="@+id/supply_chain"
+        android:name="com.saiful.mbamaster.level2_fragment.SupplyChain_fragment"
+        android:label="Supply Chain"
+        tools:layout="@layout/fragment_android__tutorial">
+
+        <action
+            android:id="@+id/action_supply_chain_to_memorise_recV"
+            app:destination="@id/memorise_recV" />
+    </fragment>
+    <fragment
+        android:id="@+id/business_statics"
+        android:name="com.saiful.mbamaster.level2_fragment.BusStatics_fragment"
+        android:label="Business Statics"
+        tools:layout="@layout/fragment_android__tutorial">
+
+        <action
+            android:id="@+id/action_business_statics_to_memorise_recV"
+            app:destination="@id/memorise_recV" />
+    </fragment>
+    <fragment
+        android:id="@+id/operation_management"
+        android:name="com.saiful.mbamaster.level2_fragment.OptManagement_fragment"
+        android:label="Operations Management"
+        tools:layout="@layout/fragment_android__tutorial">
+
+        <action
+            android:id="@+id/action_operation_management_to_memorise_recV"
+            app:destination="@id/memorise_recV" />
+    </fragment>
+    <fragment
+        android:id="@+id/memorise_recV"
+        android:name="com.saiful.mbamaster.memorise.MemorizeRecV"
+        android:label="@string/cardChoose"
+        tools:layout="@layout/fragment_memorize_rec_v"/>
+    <fragment
+        android:id="@+id/mcq_recV_p1"
+        android:name="com.saiful.mbamaster.mcq.McqRecV"
+        android:label="@string/cardChoose"
+        tools:layout="@layout/fragment_memorize_rec_v"/>
+
+</navigation>
