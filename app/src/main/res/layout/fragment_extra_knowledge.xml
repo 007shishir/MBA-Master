@@ -41,7 +41,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="sans-serif"
-                    android:text="Extra Knowledge"
+                    android:text="Level 4"
                     android:textAlignment="center"
                     android:textAllCaps="true"
                     android:textAppearance="@style/TextAppearance.AppCompat.Display3"
@@ -64,7 +64,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="MIS Business Intelligence"
+                    android:text="Strategic Management &amp; Information Systems"
                     android:textAlignment="center"
                     android:textColor="@android:color/background_light"
                     android:textSize="25sp"
@@ -72,7 +72,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/mLL_awsQuickSight"
+                android:id="@+id/mLL_networkingFCM"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
@@ -84,7 +84,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="AWS Quicksight"
+                    android:text="Networking for Corporate Management Systems"
                     android:textAlignment="center"
                     android:textColor="@android:color/background_light"
                     android:textSize="25sp"
@@ -92,7 +92,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/mLL_seo"
+                android:id="@+id/mLL_ProjectMngt"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
@@ -104,7 +104,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="SEO"
+                    android:text="Project Management"
                     android:textAlignment="center"
                     android:textColor="@android:color/background_light"
                     android:textSize="25sp"
@@ -112,7 +112,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/mLL_digitalMarketing"
+                android:id="@+id/mLL_humanRIS"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
@@ -124,84 +124,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Digital Marketing"
-                    android:textAlignment="center"
-                    android:textColor="@android:color/background_light"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/mLL_cSharp"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:background="@drawable/ic_optionbox"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="C#"
-                    android:textAlignment="center"
-                    android:textColor="@android:color/background_light"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/mLL_unity"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:background="@drawable/ic_optionbox"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="Unity"
-                    android:textAlignment="center"
-                    android:textColor="@android:color/background_light"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/mLL_python"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:background="@drawable/ic_optionbox"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="Python"
-                    android:textAlignment="center"
-                    android:textColor="@android:color/background_light"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/mLL_dJango"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:background="@drawable/ic_optionbox"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="Django"
+                    android:text="Human Resource Information System"
                     android:textAlignment="center"
                     android:textColor="@android:color/background_light"
                     android:textSize="25sp"

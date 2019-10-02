@@ -11,45 +11,20 @@ public class HomeViewModel extends ViewModel {
     private MutableLiveData<String> iBus;
     private MutableLiveData<String> manFi;
     private MutableLiveData<String> prinMan;
-    //Business Communication memorise child name
+    //All subject memorise child name
     private MutableLiveData<String> busCom_mem_p01;
-    private MutableLiveData<String> busCom_mem_p02;
-    private MutableLiveData<String> busCom_mem_p03;
-    private MutableLiveData<String> busCom_mem_p04;
-
-    //Business Communication mcq child name
-    private MutableLiveData<String> busCom_mcq_p01;
-    private MutableLiveData<String> busCom_mcq_p02;
-    private MutableLiveData<String> busCom_mcq_p03;
-    private MutableLiveData<String> busCom_mcq_p04;
-
-
-    //Fundamental of MIS memorise child name
     private MutableLiveData<String> fMis_mem_p01;
-    private MutableLiveData<String> fMis_mem_p02;
-    private MutableLiveData<String> fMis_mem_p03;
-    private MutableLiveData<String> fMis_mem_p04;
-
-
-    //Introduction to Business memorise child name
     private MutableLiveData<String> iBus_mem_p01;
-    private MutableLiveData<String> iBus_mem_p02;
-    private MutableLiveData<String> iBus_mem_p03;
-    private MutableLiveData<String> iBus_mem_p04;
-
-
-    //Managerial Finance memorise child name
     private MutableLiveData<String> manFi_mem_p01;
-    private MutableLiveData<String> manFi_mem_p02;
-    private MutableLiveData<String> manFi_mem_p03;
-    private MutableLiveData<String> manFi_mem_p04;
-
-
-    //Principle of Management memorise child name
     private MutableLiveData<String> prinMan_mem_p01;
-    private MutableLiveData<String> prinMan_mem_p02;
-    private MutableLiveData<String> prinMan_mem_p03;
-    private MutableLiveData<String> prinMan_mem_p04;
+
+
+    //all subject mcq child name
+    private MutableLiveData<String> busCom_mcq_p01;
+    private MutableLiveData<String> fMis_mcq_p01;
+    private MutableLiveData<String> iBus_mcq_p01;
+    private MutableLiveData<String> manFi_mcq_p01;
+    private MutableLiveData<String> prinMan_mcq_p01;
 
     public HomeViewModel() {
         busCom = new MutableLiveData<>();
@@ -57,6 +32,7 @@ public class HomeViewModel extends ViewModel {
         iBus = new MutableLiveData<>();
         manFi = new MutableLiveData<>();
         prinMan = new MutableLiveData<>();
+
 
         //SUBJECT name for all the subject
         busCom.setValue("Business Communication");
@@ -67,38 +43,38 @@ public class HomeViewModel extends ViewModel {
 
         //set CHILD name for Business Communication
         busCom_mem_p01 = new MutableLiveData<>();
-        busCom_mem_p02 = new MutableLiveData<>();
-        busCom_mem_p03 = new MutableLiveData<>();
-        busCom_mem_p04 = new MutableLiveData<>();
         busCom_mem_p01.setValue("bus_com_mem_p01");
 
         //set CHILD name for Fundamental of MIS
         fMis_mem_p01 = new MutableLiveData<>();
-        fMis_mem_p02 = new MutableLiveData<>();
-        fMis_mem_p03 = new MutableLiveData<>();
-        fMis_mem_p04 = new MutableLiveData<>();
         fMis_mem_p01.setValue("fmis_mem_p01");
 
         //set CHILD name for Introduction to Business
         iBus_mem_p01 = new MutableLiveData<>();
-        iBus_mem_p02 = new MutableLiveData<>();
-        iBus_mem_p03 = new MutableLiveData<>();
-        iBus_mem_p04 = new MutableLiveData<>();
         iBus_mem_p01.setValue("intro_bus_mem_p01");
 
         //set CHILD name for Managerial Finance
         manFi_mem_p01 = new MutableLiveData<>();
-        manFi_mem_p02 = new MutableLiveData<>();
-        manFi_mem_p03 = new MutableLiveData<>();
-        manFi_mem_p04 = new MutableLiveData<>();
         manFi_mem_p01.setValue("finance_mem_p01");
 
         //set CHILD name for Managerial Finance
         prinMan_mem_p01 = new MutableLiveData<>();
-        prinMan_mem_p02 = new MutableLiveData<>();
-        prinMan_mem_p03 = new MutableLiveData<>();
-        prinMan_mem_p04 = new MutableLiveData<>();
         prinMan_mem_p01.setValue("p_mngment_mem_p01");
+
+        //All the MCQ variable initiation
+        busCom_mcq_p01 = new MutableLiveData<>();
+        fMis_mcq_p01 = new MutableLiveData<>();
+        iBus_mcq_p01 = new MutableLiveData<>();
+        manFi_mcq_p01 = new MutableLiveData<>();
+        prinMan_mcq_p01 = new MutableLiveData<>();
+
+        //Firebase child name - MCQ
+        busCom_mcq_p01.setValue("busCom_mcq_p01");
+        fMis_mcq_p01.setValue("fMis_mcq_p01");
+        iBus_mcq_p01.setValue("iBus_mcq_p01");
+        manFi_mcq_p01.setValue("manFi_mcq_p01");
+        prinMan_mcq_p01.setValue("prinMan_mcq_p01");
+
 
     }
 
@@ -144,4 +120,23 @@ public class HomeViewModel extends ViewModel {
         return prinMan_mem_p01;
     }
 
+    public MutableLiveData<String> getBusCom_mcq_p01() {
+        return busCom_mcq_p01;
+    }
+
+    public MutableLiveData<String> getfMis_mcq_p01() {
+        return fMis_mcq_p01;
+    }
+
+    public MutableLiveData<String> getiBus_mcq_p01() {
+        return iBus_mcq_p01;
+    }
+
+    public MutableLiveData<String> getManFi_mcq_p01() {
+        return manFi_mcq_p01;
+    }
+
+    public MutableLiveData<String> getPrinMan_mcq_p01() {
+        return prinMan_mcq_p01;
+    }
 }

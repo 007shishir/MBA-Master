@@ -38,206 +38,140 @@ public class ExtraKnowledgeViewModel extends ViewModel {
         return mText;
     }
 
-    //Get Firebase childname for MIS Business Intelligence
-    public LiveData<String> getMBI_mem_01(){
-        mem_p01.setValue("Memorise First");
+    //Get Firebase childname for Strategic Management Information System
+    public LiveData<String> getSMIS_mem_01(){
+        mem_p01.setValue("smis_mem_01");
         return mem_p01;
     }
-    public LiveData<String> getMBI_mem_02(){
-        mem_p02.setValue("Memorise Second");
+    public LiveData<String> getSMIS_mem_02(){
+        mem_p02.setValue("SMIS_mem_02");
         return mem_p02;
     }
-    public LiveData<String> getMBI_mem_03(){
-        mem_p03.setValue("Memorise Third");
+    public LiveData<String> getSMIS_mem_03(){
+        mem_p03.setValue("SMIS_mem_03");
         return mem_p03;
     }
-    public LiveData<String> getMBI_mem_04(){
-        mem_p04.setValue("Memorise Fourth");
+    public LiveData<String> getSMIS_mem_04(){
+        mem_p04.setValue("SMIS_mem_04");
         return mem_p04;
     }
-    public LiveData<String> getMBI_mcq_01(){
-        mcq_p01.setValue("MCQ First");
+    public LiveData<String> getSMIS_mcq_01(){
+        mcq_p01.setValue("smis_mcq_01");
         return mcq_p01;
     }
-    public LiveData<String> getMBI_mcq_02(){
-        mcq_p02.setValue("MCQ Second");
+    public LiveData<String> getSMIS_mcq_02(){
+        mcq_p02.setValue("SMIS_mcq_02");
         return mcq_p02;
     }
-    public LiveData<String> getMBI_mcq_03(){
-        mcq_p03.setValue("MCQ Third");
+    public LiveData<String> getSMIS_mcq_03(){
+        mcq_p03.setValue("SMIS_mcq_03");
         return mcq_p03;
     }
-    public LiveData<String> getMBI_mcq_04(){
-        mcq_p04.setValue("MCQ Fourth");
-        return mcq_p04;
-    }
-    //Get Firebase childname for AWS Quicksight
-    public LiveData<String> getAQS_mem_01(){
-        mem_p01.setValue("AWS Memorise First");
-        return mem_p01;
-    }
-    public LiveData<String> getAQS_mem_02(){
-        mem_p02.setValue(" AWS Memorise Second");
-        return mem_p02;
-    }
-    public LiveData<String> getAQS_mem_03(){
-        mem_p03.setValue("AWS Memorise Third");
-        return mem_p03;
-    }
-    public LiveData<String> getAQS_mem_04(){
-        mem_p04.setValue("AWS Memorise Fourth");
-        return mem_p04;
-    }
-    public LiveData<String> getAQS_mcq_01(){
-        mcq_p01.setValue("AWS MCQ First");
-        return mcq_p01;
-    }
-    public LiveData<String> getAQS_mcq_02(){
-        mcq_p02.setValue("AWS MCQ Second");
-        return mcq_p02;
-    }
-    public LiveData<String> getAQS_mcq_03(){
-        mcq_p03.setValue("AWS MCQ Third");
-        return mcq_p03;
-    }
-    public LiveData<String> getAQS_mcq_04(){
-        mcq_p04.setValue("AWS MCQ Fourth");
+    public LiveData<String> getSMIS_mcq_04(){
+        mcq_p04.setValue("SMIS_mcq_04");
         return mcq_p04;
     }
 
-    //Get Firebase childname for SEO
-    public LiveData<String> getSEO_mem_01(){
-        mem_p01.setValue("SEO Memorise First");
+
+    //Get Firebase childname for Networking For Corporate Management
+    public LiveData<String> getNFCM_mem_01(){
+        mem_p01.setValue("nfcm_mem_01");
         return mem_p01;
     }
-    public LiveData<String> getSEO_mem_02(){
-        mem_p02.setValue(" SEO Memorise Second");
+    public LiveData<String> getNFCM_mem_02(){
+        mem_p02.setValue(" NFCM Memorise Second");
         return mem_p02;
     }
-    public LiveData<String> getSEO_mem_03(){
-        mem_p03.setValue("SEO Memorise Third");
+    public LiveData<String> getNFCM_mem_03(){
+        mem_p03.setValue("NFCM Memorise Third");
         return mem_p03;
     }
-    public LiveData<String> getSEO_mem_04(){
-        mem_p04.setValue("SEO Memorise Fourth");
+    public LiveData<String> getNFCM_mem_04(){
+        mem_p04.setValue("NFCM Memorise Fourth");
         return mem_p04;
     }
-    public LiveData<String> getSEO_mcq_01(){
-        mcq_p01.setValue("SEO MCQ First");
+    public LiveData<String> getNFCM_mcq_01(){
+        mcq_p01.setValue("nfcm_mcq_01");
         return mcq_p01;
     }
-    public LiveData<String> getSEO_mcq_02(){
-        mcq_p02.setValue("SEO MCQ Second");
+    public LiveData<String> getNFCM_mcq_02(){
+        mcq_p02.setValue("NFCM MCQ Second");
         return mcq_p02;
     }
-    public LiveData<String> getSEO_mcq_03(){
-        mcq_p03.setValue("SEO MCQ Third");
+    public LiveData<String> getNFCM_mcq_03(){
+        mcq_p03.setValue("NFCM MCQ Third");
         return mcq_p03;
     }
-    public LiveData<String> getSEO_mcq_04(){
-        mcq_p04.setValue("SEO MCQ Fourth");
+    public LiveData<String> getNFCM_mcq_04(){
+        mcq_p04.setValue("NFCM MCQ Fourth");
         return mcq_p04;
     }
 
-    //Get Firebase childname for Digital Marketing
-    public LiveData<String> getDMK_mem_01(){
-        mem_p01.setValue("DMK Memorise First");
+    //Get Firebase childname for Project Management
+    public LiveData<String> getPM_mem_01(){
+        mem_p01.setValue("pm_mem_01");
         return mem_p01;
     }
-    public LiveData<String> getDMK_mem_02(){
-        mem_p02.setValue("DMK Memorise Second");
+    public LiveData<String> getPM_mem_02(){
+        mem_p02.setValue(" PM Memorise Second");
         return mem_p02;
     }
-    public LiveData<String> getDMK_mem_03(){
-        mem_p03.setValue("DMK Memorise Third");
+    public LiveData<String> getPM_mem_03(){
+        mem_p03.setValue("PM Memorise Third");
         return mem_p03;
     }
-    public LiveData<String> getDMK_mem_04(){
-        mem_p04.setValue("DMK Memorise Fourth");
+    public LiveData<String> getPM_mem_04(){
+        mem_p04.setValue("PM Memorise Fourth");
         return mem_p04;
     }
-    public LiveData<String> getDMK_mcq_01(){
-        mcq_p01.setValue("DMK MCQ First");
+    public LiveData<String> getPM_mcq_01(){
+        mcq_p01.setValue("PM MCQ First");
         return mcq_p01;
     }
-    public LiveData<String> getDMK_mcq_02(){
-        mcq_p02.setValue("DMK MCQ Second");
+    public LiveData<String> getPM_mcq_02(){
+        mcq_p02.setValue("PM MCQ Second");
         return mcq_p02;
     }
-    public LiveData<String> getDMK_mcq_03(){
-        mcq_p03.setValue("DMK MCQ Third");
+    public LiveData<String> getPM_mcq_03(){
+        mcq_p03.setValue("PM MCQ Third");
         return mcq_p03;
     }
-    public LiveData<String> getDMK_mcq_04(){
-        mcq_p04.setValue("DMK MCQ Fourth");
+    public LiveData<String> getPM_mcq_04(){
+        mcq_p04.setValue("PM MCQ Fourth");
         return mcq_p04;
     }
 
-    //Get Firebase childname for C#
-    public LiveData<String> getCSH_mem_01(){
-        mem_p01.setValue("CSH Memorise First");
+    //Get Firebase childname for Human Resource Informaiton System
+    public LiveData<String> getHRIS_mem_01(){
+        mem_p01.setValue("hris_mem_01");
         return mem_p01;
     }
-    public LiveData<String> getCSH_mem_02(){
-        mem_p02.setValue(" CSH Memorise Second");
+    public LiveData<String> getHRIS_mem_02(){
+        mem_p02.setValue("HRIS Memorise Second");
         return mem_p02;
     }
-    public LiveData<String> getCSH_mem_03(){
-        mem_p03.setValue("CSH Memorise Third");
+    public LiveData<String> getHRIS_mem_03(){
+        mem_p03.setValue("HRIS Memorise Third");
         return mem_p03;
     }
-    public LiveData<String> getCSH_mem_04(){
-        mem_p04.setValue("CSH Memorise Fourth");
+    public LiveData<String> getHRIS_mem_04(){
+        mem_p04.setValue("HRIS Memorise Fourth");
         return mem_p04;
     }
-    public LiveData<String> getCSH_mcq_01(){
-        mcq_p01.setValue("CSH MCQ First");
+    public LiveData<String> getHRIS_mcq_01(){
+        mcq_p01.setValue("HRIS MCQ First");
         return mcq_p01;
     }
-    public LiveData<String> getCSH_mcq_02(){
-        mcq_p02.setValue("CSH MCQ Second");
+    public LiveData<String> getHRIS_mcq_02(){
+        mcq_p02.setValue("HRIS MCQ Second");
         return mcq_p02;
     }
-    public LiveData<String> getCSH_mcq_03(){
-        mcq_p03.setValue("CSH MCQ Third");
+    public LiveData<String> getHRIS_mcq_03(){
+        mcq_p03.setValue("HRIS MCQ Third");
         return mcq_p03;
     }
-    public LiveData<String> getCSH_mcq_04(){
-        mcq_p04.setValue("CSH MCQ Fourth");
-        return mcq_p04;
-    }
-
-    //Get Firebase childname for UNITY
-    public LiveData<String> getUTY_mem_01(){
-        mem_p01.setValue("UTY Memorise First");
-        return mem_p01;
-    }
-    public LiveData<String> getUTY_mem_02(){
-        mem_p02.setValue(" UTY Memorise Second");
-        return mem_p02;
-    }
-    public LiveData<String> getUTY_mem_03(){
-        mem_p03.setValue("UTY Memorise Third");
-        return mem_p03;
-    }
-    public LiveData<String> getUTY_mem_04(){
-        mem_p04.setValue("UTY Memorise Fourth");
-        return mem_p04;
-    }
-    public LiveData<String> getUTY_mcq_01(){
-        mcq_p01.setValue("UTY MCQ First");
-        return mcq_p01;
-    }
-    public LiveData<String> getUTY_mcq_02(){
-        mcq_p02.setValue("UTY MCQ Second");
-        return mcq_p02;
-    }
-    public LiveData<String> getUTY_mcq_03(){
-        mcq_p03.setValue("UTY MCQ Third");
-        return mcq_p03;
-    }
-    public LiveData<String> getUTY_mcq_04(){
-        mcq_p04.setValue("UTY MCQ Fourth");
+    public LiveData<String> getHRIS_mcq_04(){
+        mcq_p04.setValue("HRIS MCQ Fourth");
         return mcq_p04;
     }
 }

@@ -38,7 +38,7 @@ public class MemorizeVersion1 extends AppCompatActivity {
     private ProgressBar progressBar2, progressPrimary, progressLearning, progressMaster;
     private Handler handler = new Handler();
 
-    private String question, e1, e2, m, id;
+    private String question, e1, e2, m, id, firebaseRootURL;
     private String getQuestion, getE1, getE2, getM;
     private int totalQ, totalE;
     private int totalPoint;
@@ -97,6 +97,8 @@ public class MemorizeVersion1 extends AppCompatActivity {
 //        mAdView_2.loadAd(adRequest);
 //        mAdView_3.loadAd(adRequest);
 //        mAdView_4.loadAd(adRequest);
+
+        firebaseRootURL = getResources().getString(R.string.firebase_database_url)+"/";
 
         viewModel = ViewModelProviders.of(this).get(Memorize_ViewModel.class);
         mPost_key = Objects.requireNonNull(getIntent().getExtras()).getString("key_name");
@@ -254,13 +256,15 @@ public class MemorizeVersion1 extends AppCompatActivity {
                         getQuestion_Explanation();
                         getQuestion = question;
                         getE1 = e1;
-                        getE2 = e2;
+                        //geting Explanation Two getE2
+                        setGetE2(e2);
                         getM = m;
                     }
                 } else {
                     getQuestion = mre.getQ();
                     getE1 = mre.getE();
-                    getE2 = mre.getEe();
+                    //geting Explanation Two getE2
+                    setGetE2(mre.getEe());
                     getM = mre.getM();
 
                 }
@@ -317,7 +321,7 @@ public class MemorizeVersion1 extends AppCompatActivity {
                     public void onClick(View v) {
                         clicked = true;
                         next_Q_or_not_SUBMIT_offline();
-                        setVisibilityForImage(getM);
+//                        setVisibilityForImage(getM);
                     }
                 });
 
@@ -356,7 +360,7 @@ public class MemorizeVersion1 extends AppCompatActivity {
     }
 
     public void getQuestion_Explanation() {
-        Firebase mQuestion = new Firebase("https://mba-master-bdf52.firebaseio.com/" + child_Name + "/" + mPost_key + "/" + mQuestNum + "/q");
+        Firebase mQuestion = new Firebase(firebaseRootURL + child_Name + "/" + mPost_key + "/" + mQuestNum + "/q");
         mQuestion.addValueEventListener(new com.firebase.client.ValueEventListener() {
             @Override
             public void onDataChange(com.firebase.client.DataSnapshot dataSnapshot) {
@@ -378,7 +382,7 @@ public class MemorizeVersion1 extends AppCompatActivity {
         });
 
 
-        Firebase mE1 = new Firebase("https://mba-master-bdf52.firebaseio.com/" + child_Name + "/" + mPost_key + "/" + mQuestNum + "/e");
+        Firebase mE1 = new Firebase(firebaseRootURL + child_Name + "/" + mPost_key + "/" + mQuestNum + "/e");
         mE1.addValueEventListener(new com.firebase.client.ValueEventListener() {
             @Override
             public void onDataChange(com.firebase.client.DataSnapshot dataSnapshot) {
@@ -394,7 +398,7 @@ public class MemorizeVersion1 extends AppCompatActivity {
             }
         });
 
-        Firebase mE2 = new Firebase("https://mba-master-bdf52.firebaseio.com/" + child_Name + "/" + mPost_key + "/" + mQuestNum + "/ee");
+        Firebase mE2 = new Firebase(firebaseRootURL + child_Name + "/" + mPost_key + "/" + mQuestNum + "/ee");
         //mChoice3.keepSynced(true);
         mE2.addValueEventListener(new com.firebase.client.ValueEventListener() {
             @Override
@@ -426,7 +430,7 @@ public class MemorizeVersion1 extends AppCompatActivity {
     }
 
     public void getTotal_Quest_and_Explanation_No() {
-        Firebase mTotalQ = new Firebase("https://mba-master-bdf52.firebaseio.com/" + child_Name + "/" + mPost_key + "/info/totalQ");
+        Firebase mTotalQ = new Firebase(firebaseRootURL + child_Name + "/" + mPost_key + "/info/totalQ");
         mTotalQ.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -440,7 +444,7 @@ public class MemorizeVersion1 extends AppCompatActivity {
             }
         });
 
-        Firebase mTotalE = new Firebase("https://mba-master-bdf52.firebaseio.com/" + child_Name + "/" + mPost_key + "/info/totalE");
+        Firebase mTotalE = new Firebase(firebaseRootURL + child_Name + "/" + mPost_key + "/info/totalE");
         mTotalE.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -454,7 +458,8 @@ public class MemorizeVersion1 extends AppCompatActivity {
             }
         });
     }
-//update the card status (for the whole question) for the card(40 question)
+
+    //update the card status (for the whole question) for the card(40 question)
     public void updateLevelStatus(int a) {
         if (a < 2) {
             mTxt_level.setText("Primary");
@@ -2107,7 +2112,7 @@ public class MemorizeVersion1 extends AppCompatActivity {
 
         progreesBarBackgroundVISIBLE();
 
-        Firebase mTotalQ = new Firebase("https://mba-master-bdf52.firebaseio.com/" + child_Name + "/" + mPost_key + "/info/totalQ");
+        Firebase mTotalQ = new Firebase(firebaseRootURL + child_Name + "/" + mPost_key + "/info/totalQ");
         mTotalQ.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -2121,7 +2126,7 @@ public class MemorizeVersion1 extends AppCompatActivity {
             }
         });
 
-        Firebase mTotalE = new Firebase("https://mba-master-bdf52.firebaseio.com/" + child_Name + "/" + mPost_key + "/info/totalE");
+        Firebase mTotalE = new Firebase(firebaseRootURL + child_Name + "/" + mPost_key + "/info/totalE");
         mTotalE.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -2135,7 +2140,7 @@ public class MemorizeVersion1 extends AppCompatActivity {
             }
         });
 
-        Firebase mQuestion = new Firebase("https://mba-master-bdf52.firebaseio.com/" + child_Name + "/" + mPost_key + "/" + mQuestNum + "/q");
+        Firebase mQuestion = new Firebase(firebaseRootURL + child_Name + "/" + mPost_key + "/" + mQuestNum + "/q");
         mQuestion.addValueEventListener(new com.firebase.client.ValueEventListener() {
             @Override
             public void onDataChange(com.firebase.client.DataSnapshot dataSnapshot) {
@@ -2158,7 +2163,7 @@ public class MemorizeVersion1 extends AppCompatActivity {
         });
 
 
-        Firebase mE1 = new Firebase("https://mba-master-bdf52.firebaseio.com/" + child_Name + "/" + mPost_key + "/" + mQuestNum + "/e");
+        Firebase mE1 = new Firebase(firebaseRootURL + child_Name + "/" + mPost_key + "/" + mQuestNum + "/e");
         mE1.addValueEventListener(new com.firebase.client.ValueEventListener() {
             @Override
             public void onDataChange(com.firebase.client.DataSnapshot dataSnapshot) {
@@ -2171,7 +2176,7 @@ public class MemorizeVersion1 extends AppCompatActivity {
             }
         });
 
-        Firebase mE2 = new Firebase("https://mba-master-bdf52.firebaseio.com/" + child_Name + "/" + mPost_key + "/" + mQuestNum + "/ee");
+        Firebase mE2 = new Firebase(firebaseRootURL + child_Name + "/" + mPost_key + "/" + mQuestNum + "/ee");
         //mChoice3.keepSynced(true);
         mE2.addValueEventListener(new com.firebase.client.ValueEventListener() {
             @Override
@@ -2185,7 +2190,7 @@ public class MemorizeVersion1 extends AppCompatActivity {
             }
         });
 
-        Firebase mM = new Firebase("https://mba-master-bdf52.firebaseio.com/" + child_Name + "/" + mPost_key + "/" + mQuestNum + "/m");
+        Firebase mM = new Firebase(firebaseRootURL + child_Name + "/" + mPost_key + "/" + mQuestNum + "/m");
         mM.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(com.firebase.client.DataSnapshot dataSnapshot) {
@@ -2229,7 +2234,7 @@ public class MemorizeVersion1 extends AppCompatActivity {
             public void onClick(View v) {
                 clicked = true;
                 next_Q_or_not_SUBMIT();
-                setVisibilityForImage(m);
+//                setVisibilityForImage(m);
                 eachQuestStatus();
             }
         });
@@ -3650,6 +3655,9 @@ public class MemorizeVersion1 extends AppCompatActivity {
                 q41 = eachQuestStatusINCREASE(q41);
                 updateLevelEachQuestionStatus(q41);
                 break;
+                default:
+                    //DO NOTHING
+                    break;
 
         }
     }
@@ -3657,7 +3665,8 @@ public class MemorizeVersion1 extends AppCompatActivity {
     public void eachQuestStatus_DB() {
         updateLevelEachQuestionStatus(level_question);
     }
-//count  the number of primary learning and master questioin for the progress bar
+
+    //count  the number of primary learning and master questioin for the progress bar
     public void countPriLernMast() {
 
         final String customID = child_Name + "_" + mPost_key + "_" + "%";
@@ -3682,9 +3691,9 @@ public class MemorizeVersion1 extends AppCompatActivity {
                         progressLearning.setProgress(countLearning);
                         progressMaster.setProgress(countMaster);
 
-                        String textPr = "Primary: " + String.valueOf(countPrimary) + " (out of " + String.valueOf(totalQ) + ")";
-                        String textLr = "Learning: " + String.valueOf(countLearning) + " (out of " + String.valueOf(totalQ) + ")";
-                        String textMs = "Master: " + String.valueOf(countMaster) + " (out of " + String.valueOf(totalQ) + ")";
+                        String textPr = "Primary: " + countPrimary + " (out of " + totalQ + ")";
+                        String textLr = "Learning: " + countLearning + " (out of " + totalQ + ")";
+                        String textMs = "Master: " + countMaster + " (out of " + totalQ + ")";
 
                         mPrimary_Text.setText(textPr);
                         mLearning_Text.setText(textLr);
@@ -3781,6 +3790,7 @@ public class MemorizeVersion1 extends AppCompatActivity {
         NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
         if (networkInfo != null && networkInfo.isConnected()) {
 
+            setVisibilityForImage(m);
             mTxt_Submit.setVisibility(View.GONE);
             mTxt_known.setVisibility(View.VISIBLE);
             mTxt_unknown.setVisibility(View.VISIBLE);
@@ -3796,10 +3806,11 @@ public class MemorizeVersion1 extends AppCompatActivity {
                     mTxt_E1.setText(Html.fromHtml(e1));
                 }
 //                    mTxt_E2.setText(e2);
+                setGetE2(e2);
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                    mTxt_E2.setText(Html.fromHtml(e2, Html.FROM_HTML_MODE_COMPACT));
+                    mTxt_E2.setText(Html.fromHtml(getE2, Html.FROM_HTML_MODE_COMPACT));
                 } else {
-                    mTxt_E2.setText(Html.fromHtml(e2));
+                    mTxt_E2.setText(Html.fromHtml(getE2));
                 }
             }
 
@@ -3890,6 +3901,7 @@ public class MemorizeVersion1 extends AppCompatActivity {
         NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
         if (networkInfo != null && networkInfo.isConnected()) {
 
+            setVisibilityForImage(getM);
             mTxt_Submit.setVisibility(View.GONE);
             mTxt_known.setVisibility(View.VISIBLE);
             mTxt_unknown.setVisibility(View.VISIBLE);
@@ -3920,20 +3932,30 @@ public class MemorizeVersion1 extends AppCompatActivity {
     // a will recieve the image link and picasso will show the image in imageView
     public void setVisibilityForImage(String a) {
 
-        if (a !=null && a.equalsIgnoreCase("n")) {
+        if (a != null && a.equalsIgnoreCase("n")) {
             mLL_image_memorise.setVisibility(View.GONE);
-        } else if (a == null){
+        } else if (a == null) {
             mLL_image_memorise.setVisibility(View.GONE);
-        } else {
-//            Toast.makeText(getApplicationContext(), "inside setVisibilityForImage a = "+a, Toast.LENGTH_LONG).show();
+        }else if (a.equalsIgnoreCase("m")){
+            mLL_image_memorise.setVisibility(View.GONE);
+        }else if (a.equalsIgnoreCase("image")){
+            mLL_image_memorise.setVisibility(View.GONE);
+        }
+        else {
             mLL_image_memorise.setVisibility(View.VISIBLE);
 
             Picasso.get().load(a)
                     .placeholder(R.drawable.ic_menu_camera)
                     .into(imageView_memorise);
-//            photoViewAttacher = new PhotoViewAttacher(imageView_memorise);
-//            photoViewAttacher.update();
+        }
 
+    }
+
+    public void setGetE2(String check_explnation){
+        if (check_explnation.equalsIgnoreCase("m") || check_explnation.equalsIgnoreCase("n")||check_explnation.isEmpty()){
+            getE2 = getResources().getString(R.string.no_explanation);
+        }else {
+            getE2 = check_explnation;
         }
     }
 }
