@@ -15,6 +15,8 @@ import androidx.navigation.Navigation;
 import com.saiful.mbamaster.R;
 import com.saiful.mbamaster.ui.slideshow.Level3_ViewModel;
 
+import java.util.Objects;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -49,6 +51,10 @@ public class DataMining_WareHousing extends Fragment implements View.OnClickList
         mTxt_and_mem_p03 = rootView.findViewById(R.id.mTxt_and_mem_p03);
         mTxt_and_mem_p04 = rootView.findViewById(R.id.mTxt_and_mem_p04);
 
+        mTxt_and_mem_p02.setText("DBMS");
+        mTxt_and_mem_p03.setText("DSS");
+        mTxt_and_mem_p04.setText("ERP");
+
         mTxt_and_mcq_p01 = rootView.findViewById(R.id.mTxt_and_mcq_p01);
         mTxt_and_mcq_p02 = rootView.findViewById(R.id.mTxt_and_mcq_p02);
         mTxt_and_mcq_p03 = rootView.findViewById(R.id.mTxt_and_mcq_p03);
@@ -73,16 +79,20 @@ public class DataMining_WareHousing extends Fragment implements View.OnClickList
                 child_name = level3_viewModel.getDataMining_mem_p01().getValue();
                 Bundle memorise_p01 = new Bundle();
                 memorise_p01.putString("child_name", child_name);
-                Navigation.findNavController(v).navigate(R.id.action_frag_data_mining_to_memorise_recV, memorise_p01);
+                Navigation.findNavController(v).
+                        navigate(R.id.action_frag_data_mining_to_memorise_recV, memorise_p01);
                 break;
             case R.id.mTxt_and_mem_p02:
-                printingToastMessage();
+                child_name = level3_viewModel.getDbms_mem_p01().getValue();
+                navigateNEXT_fragment();
                 break;
             case R.id.mTxt_and_mem_p03:
-                printingToastMessage();
+                child_name = level3_viewModel.getDss_mem_p01().getValue();
+                navigateNEXT_fragment();
                 break;
             case R.id.mTxt_and_mem_p04:
-                printingToastMessage();
+                child_name = level3_viewModel.getErp_mem_p01().getValue();
+                navigateNEXT_fragment();
                 break;
             case R.id.mTxt_and_mcq_p01:
                 printingToastMessage();
@@ -101,6 +111,13 @@ public class DataMining_WareHousing extends Fragment implements View.OnClickList
                 Toast.makeText(getContext(), "This is default", Toast.LENGTH_SHORT).show();
                 break;
         }
+    }
+
+    public void navigateNEXT_fragment(){
+        Bundle memorise_p01 = new Bundle();
+        memorise_p01.putString("child_name", child_name);
+        Navigation.findNavController(Objects.requireNonNull(getView())).
+                navigate(R.id.action_frag_data_mining_to_memorise_recV, memorise_p01);
     }
 
     public void printingToastMessage() {

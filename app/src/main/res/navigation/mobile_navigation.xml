@@ -13,19 +13,29 @@
 
         <action
             android:id="@+id/action_nav_home_to_frag_introduction_business"
-            app:destination="@id/frag_introduction_business" />
+            app:destination="@id/frag_introduction_business"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
         <action
             android:id="@+id/action_nav_home_to_frag_business_communication"
-            app:destination="@id/frag_business_communication" />
+            app:destination="@id/frag_business_communication"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
         <action
             android:id="@+id/action_nav_home_to_frag_managerial_finance"
-            app:destination="@id/frag_managerial_finance" />
+            app:destination="@id/frag_managerial_finance"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
         <action
             android:id="@+id/action_nav_home_to_frag_fundamental_mis"
-            app:destination="@id/frag_fundamental_mis" />
+            app:destination="@id/frag_fundamental_mis"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
         <action
             android:id="@+id/action_nav_home_to_frag_principle_of_management"
-            app:destination="@id/frag_principle_of_management" />
+            app:destination="@id/frag_principle_of_management"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
     </fragment>
 
     <fragment
@@ -168,6 +178,11 @@
         <action
             android:id="@+id/action_frag_fundamental_mis_to_memorise_recV"
             app:destination="@id/memorise_recV" />
+        <action
+            android:id="@+id/action_frag_fundamental_mis_to_mcq_recV_p1"
+            app:destination="@id/mcq_recV_p1"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
     </fragment>
     <fragment
         android:id="@+id/frag_principle_of_management"
@@ -178,6 +193,11 @@
         <action
             android:id="@+id/action_frag_principle_of_management_to_memorise_recV"
             app:destination="@id/memorise_recV" />
+        <action
+            android:id="@+id/action_frag_principle_of_management_to_mcq_recV_p1"
+            app:destination="@id/mcq_recV_p1"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
     </fragment>
     <fragment
         android:id="@+id/frag_managerial_finance"
@@ -188,6 +208,11 @@
         <action
             android:id="@+id/action_frag_managerial_finance_to_memorise_recV"
             app:destination="@id/memorise_recV" />
+        <action
+            android:id="@+id/action_frag_managerial_finance_to_mcq_recV_p1"
+            app:destination="@id/mcq_recV_p1"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
     </fragment>
     <fragment
         android:id="@+id/frag_business_communication"
@@ -198,6 +223,11 @@
         <action
             android:id="@+id/action_frag_business_communication_to_memorise_recV"
             app:destination="@id/memorise_recV" />
+        <action
+            android:id="@+id/action_frag_business_communication_to_mcq_recV_p1"
+            app:destination="@id/mcq_recV_p1"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
     </fragment>
     <fragment
         android:id="@+id/frag_introduction_business"
@@ -208,6 +238,11 @@
         <action
             android:id="@+id/action_frag_introduction_business_to_memorise_recV"
             app:destination="@id/memorise_recV" />
+        <action
+            android:id="@+id/action_frag_introduction_business_to_mcq_recV_p1"
+            app:destination="@id/mcq_recV_p1"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
     </fragment>
 
     <fragment

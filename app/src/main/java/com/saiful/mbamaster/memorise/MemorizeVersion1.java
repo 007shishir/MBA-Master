@@ -317,7 +317,7 @@ public class MemorizeVersion1 extends AppCompatActivity {
                     public void onClick(View v) {
                         clicked = true;
                         next_Q_or_not_SUBMIT_offline();
-                        setVisibilityForImage(getM);
+//                        setVisibilityForImage(getM);
                     }
                 });
 
@@ -454,7 +454,8 @@ public class MemorizeVersion1 extends AppCompatActivity {
             }
         });
     }
-//update the card status (for the whole question) for the card(40 question)
+
+    //update the card status (for the whole question) for the card(40 question)
     public void updateLevelStatus(int a) {
         if (a < 2) {
             mTxt_level.setText("Primary");
@@ -2229,7 +2230,7 @@ public class MemorizeVersion1 extends AppCompatActivity {
             public void onClick(View v) {
                 clicked = true;
                 next_Q_or_not_SUBMIT();
-                setVisibilityForImage(m);
+//                setVisibilityForImage(m);
                 eachQuestStatus();
             }
         });
@@ -3657,7 +3658,8 @@ public class MemorizeVersion1 extends AppCompatActivity {
     public void eachQuestStatus_DB() {
         updateLevelEachQuestionStatus(level_question);
     }
-//count  the number of primary learning and master questioin for the progress bar
+
+    //count  the number of primary learning and master questioin for the progress bar
     public void countPriLernMast() {
 
         final String customID = child_Name + "_" + mPost_key + "_" + "%";
@@ -3781,6 +3783,7 @@ public class MemorizeVersion1 extends AppCompatActivity {
         NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
         if (networkInfo != null && networkInfo.isConnected()) {
 
+            setVisibilityForImage(m);
             mTxt_Submit.setVisibility(View.GONE);
             mTxt_known.setVisibility(View.VISIBLE);
             mTxt_unknown.setVisibility(View.VISIBLE);
@@ -3890,6 +3893,7 @@ public class MemorizeVersion1 extends AppCompatActivity {
         NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
         if (networkInfo != null && networkInfo.isConnected()) {
 
+            setVisibilityForImage(getM);
             mTxt_Submit.setVisibility(View.GONE);
             mTxt_known.setVisibility(View.VISIBLE);
             mTxt_unknown.setVisibility(View.VISIBLE);
@@ -3920,20 +3924,17 @@ public class MemorizeVersion1 extends AppCompatActivity {
     // a will recieve the image link and picasso will show the image in imageView
     public void setVisibilityForImage(String a) {
 
-        if (a !=null && a.equalsIgnoreCase("n")) {
+        if (a != null && a.equalsIgnoreCase("n")) {
             mLL_image_memorise.setVisibility(View.GONE);
-        } else if (a == null){
+        } else if (a == null) {
             mLL_image_memorise.setVisibility(View.GONE);
         } else {
-//            Toast.makeText(getApplicationContext(), "inside setVisibilityForImage a = "+a, Toast.LENGTH_LONG).show();
             mLL_image_memorise.setVisibility(View.VISIBLE);
 
             Picasso.get().load(a)
                     .placeholder(R.drawable.ic_menu_camera)
                     .into(imageView_memorise);
-//            photoViewAttacher = new PhotoViewAttacher(imageView_memorise);
-//            photoViewAttacher.update();
-
         }
+
     }
 }

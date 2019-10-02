@@ -40,12 +40,12 @@ public class Level2_Fragment extends Fragment implements View.OnClickListener {
         mLL_optManagement.setOnClickListener(this);
         mLL_supplyChain.setOnClickListener(this);
 
-        level2_viewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-//                textView.setText(s);
-            }
-        });
+//        level2_viewModel.getText().observe(this, new Observer<String>() {
+//            @Override
+//            public void onChanged(@Nullable String s) {
+////                textView.setText(s);
+//            }
+//        });
         return root;
     }
 

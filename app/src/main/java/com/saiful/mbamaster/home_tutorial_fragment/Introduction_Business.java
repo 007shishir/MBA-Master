@@ -15,6 +15,8 @@ import androidx.navigation.Navigation;
 import com.saiful.mbamaster.R;
 import com.saiful.mbamaster.ui.home.HomeViewModel;
 
+import java.util.Objects;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -50,6 +52,10 @@ public class Introduction_Business extends Fragment implements View.OnClickListe
         mTxt_and_mem_p03 = rootView.findViewById(R.id.mTxt_and_mem_p03);
         mTxt_and_mem_p04 = rootView.findViewById(R.id.mTxt_and_mem_p04);
 
+        mTxt_and_mem_p02.setText("FMIS");
+        mTxt_and_mem_p03.setText("Finance");
+        mTxt_and_mem_p04.setText("PrMngt");
+
         mTxt_and_mcq_p01 = rootView.findViewById(R.id.mTxt_and_mcq_p01);
         mTxt_and_mcq_p02 = rootView.findViewById(R.id.mTxt_and_mcq_p02);
         mTxt_and_mcq_p03 = rootView.findViewById(R.id.mTxt_and_mcq_p03);
@@ -78,16 +84,20 @@ public class Introduction_Business extends Fragment implements View.OnClickListe
                         navigate(R.id.action_frag_introduction_business_to_memorise_recV, memorise_p01);
                 break;
             case R.id.mTxt_and_mem_p02:
-                printingToastMessage();
+                child_name = homeViewModel.getfMis_mem_p01().getValue();
+                navigateNEXT_fragment();
                 break;
             case R.id.mTxt_and_mem_p03:
-                printingToastMessage();
+                child_name = homeViewModel.getManFi_mem_p01().getValue();
+                navigateNEXT_fragment();
                 break;
             case R.id.mTxt_and_mem_p04:
-                printingToastMessage();
+                child_name = homeViewModel.getPrinMan_mem_p01().getValue();
+                navigateNEXT_fragment();
                 break;
             case R.id.mTxt_and_mcq_p01:
-                printingToastMessage();
+                child_name = homeViewModel.getiBus_mcq_p01().getValue();
+                navigateNEXT_fragment_mcq();
                 break;
             case R.id.mTxt_and_mcq_p02:
                 printingToastMessage();
@@ -103,6 +113,19 @@ public class Introduction_Business extends Fragment implements View.OnClickListe
                 Toast.makeText(getContext(), "This is default", Toast.LENGTH_SHORT).show();
                 break;
         }
+    }
+
+    public void navigateNEXT_fragment(){
+        Bundle memorise_p01 = new Bundle();
+        memorise_p01.putString("child_name", child_name);
+        Navigation.findNavController(Objects.requireNonNull(getView())).
+                navigate(R.id.action_frag_introduction_business_to_memorise_recV, memorise_p01);
+    }
+    public void navigateNEXT_fragment_mcq(){
+        Bundle mcq = new Bundle();
+        mcq.putString("child_name", child_name);
+        Navigation.findNavController(Objects.requireNonNull(getView())).
+                navigate(R.id.action_frag_introduction_business_to_mcq_recV_p1, mcq);
     }
 
     public void printingToastMessage() {

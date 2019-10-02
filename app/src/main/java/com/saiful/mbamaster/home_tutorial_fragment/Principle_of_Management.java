@@ -15,6 +15,8 @@ import androidx.navigation.Navigation;
 import com.saiful.mbamaster.R;
 import com.saiful.mbamaster.ui.home.HomeViewModel;
 
+import java.util.Objects;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -50,6 +52,10 @@ public class Principle_of_Management extends Fragment implements View.OnClickLis
         mTxt_and_mem_p03 = rootView.findViewById(R.id.mTxt_and_mem_p03);
         mTxt_and_mem_p04 = rootView.findViewById(R.id.mTxt_and_mem_p04);
 
+        mTxt_and_mem_p02.setText("BusCom");
+        mTxt_and_mem_p03.setText("FMIS");
+        mTxt_and_mem_p04.setText("IntroBus");
+
         mTxt_and_mcq_p01 = rootView.findViewById(R.id.mTxt_and_mcq_p01);
         mTxt_and_mcq_p02 = rootView.findViewById(R.id.mTxt_and_mcq_p02);
         mTxt_and_mcq_p03 = rootView.findViewById(R.id.mTxt_and_mcq_p03);
@@ -74,19 +80,24 @@ public class Principle_of_Management extends Fragment implements View.OnClickLis
                 child_name = homeViewModel.getPrinMan_mem_p01().getValue();
                 Bundle memorise_p01 = new Bundle();
                 memorise_p01.putString("child_name", child_name);
-                Navigation.findNavController(v).navigate(R.id.action_frag_principle_of_management_to_memorise_recV, memorise_p01);
+                Navigation.findNavController(v).
+                        navigate(R.id.action_frag_principle_of_management_to_memorise_recV, memorise_p01);
                 break;
             case R.id.mTxt_and_mem_p02:
-                printingToastMessage();
+                child_name = homeViewModel.get_busCom_mem_p01().getValue();
+                navigateNEXT_fragment();
                 break;
             case R.id.mTxt_and_mem_p03:
-                printingToastMessage();
+                child_name = homeViewModel.getfMis_mem_p01().getValue();
+                navigateNEXT_fragment();
                 break;
             case R.id.mTxt_and_mem_p04:
-                printingToastMessage();
+                child_name = homeViewModel.getiBus_mem_p01().getValue();
+                navigateNEXT_fragment();
                 break;
             case R.id.mTxt_and_mcq_p01:
-                printingToastMessage();
+                child_name = homeViewModel.getPrinMan_mcq_p01().getValue();
+                navigateNEXT_fragment_mcq();
                 break;
             case R.id.mTxt_and_mcq_p02:
                 printingToastMessage();
@@ -102,6 +113,19 @@ public class Principle_of_Management extends Fragment implements View.OnClickLis
                 Toast.makeText(getContext(), "This is default", Toast.LENGTH_SHORT).show();
                 break;
         }
+    }
+
+    public void navigateNEXT_fragment(){
+        Bundle memorise_p01 = new Bundle();
+        memorise_p01.putString("child_name", child_name);
+        Navigation.findNavController(Objects.requireNonNull(getView())).
+                navigate(R.id.action_frag_principle_of_management_to_memorise_recV, memorise_p01);
+    }
+    public void navigateNEXT_fragment_mcq(){
+        Bundle mcq = new Bundle();
+        mcq.putString("child_name", child_name);
+        Navigation.findNavController(Objects.requireNonNull(getView())).
+                navigate(R.id.action_frag_principle_of_management_to_mcq_recV_p1, mcq);
     }
 
     public void printingToastMessage(){
