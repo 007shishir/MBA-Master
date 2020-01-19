@@ -3957,5 +3957,6 @@ public class MemorizeVersion1 extends AppCompatActivity {
         }else {
             getE2 = check_explnation;
         }
+
     }
 }

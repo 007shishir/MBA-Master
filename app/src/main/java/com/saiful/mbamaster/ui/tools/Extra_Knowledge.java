@@ -19,8 +19,10 @@ import com.saiful.mbamaster.R;
 public class Extra_Knowledge extends Fragment implements View.OnClickListener {
 
     private ExtraKnowledgeViewModel ekViewModel;
+
     private LinearLayout mLL_mbi, mLL_networkingFCM, mLL_ProjectMngt,
             mLL_humanRIS;
+
     private Bundle topic;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
