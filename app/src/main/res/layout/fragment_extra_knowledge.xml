@@ -84,7 +84,11 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
+<<<<<<< HEAD
                     android:text="Networking for Corporate Management Systems"
+=======
+                    android:text="Information Securities Management Systems"
+>>>>>>> 3b854cff864f9575a477f436abfc13417d6291ef
                     android:textAlignment="center"
                     android:textColor="@android:color/background_light"
                     android:textSize="25sp"
@@ -104,7 +108,11 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
+<<<<<<< HEAD
                     android:text="Project Management"
+=======
+                    android:text="Management Control System"
+>>>>>>> 3b854cff864f9575a477f436abfc13417d6291ef
                     android:textAlignment="center"
                     android:textColor="@android:color/background_light"
                     android:textSize="25sp"
@@ -124,6 +132,48 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
+<<<<<<< HEAD
+=======
+                    android:text="Knowledge Management"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mLL_cSharp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:background="@drawable/ic_optionbox"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Total Quality Management"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/mLL_unity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:background="@drawable/ic_optionbox"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+>>>>>>> 3b854cff864f9575a477f436abfc13417d6291ef
                     android:text="Human Resource Information System"
                     android:textAlignment="center"
                     android:textColor="@android:color/background_light"
