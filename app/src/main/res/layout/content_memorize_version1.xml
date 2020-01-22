@@ -157,30 +157,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="8dp"
-                    android:text=""
-                    android:textAlignment="textStart"
+                    android:text="ee"
                     android:textColor="@color/common_google_signin_btn_text_dark_focused" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/mAdView_1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    ads:adSize="SMART_BANNER"
-                    ads:adUnitId="ca-app-pub-2522810443010389/7987004370" />
-
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/mLL_image_memorise"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:gravity="center"
                 android:minHeight="350dp"
                 android:orientation="horizontal">
@@ -188,9 +174,12 @@
                 <ImageView
                     android:id="@+id/mImage_view"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:adjustViewBounds="true"
                     android:minHeight="100dp"
+                    android:padding="5dp"
+                    android:scaleType="fitStart"
                     app:srcCompat="@drawable/ic_autorenew_black_24dp" />
             </LinearLayout>
 
@@ -260,46 +249,13 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/banner_container"
+                android:layout_weight="1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/mAdView_2"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    ads:adSize="SMART_BANNER"
-                    ads:adUnitId="ca-app-pub-3940256099942544/6300978111" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/mAdView_3"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    ads:adSize="SMART_BANNER"
-                    ads:adUnitId="ca-app-pub-3940256099942544/6300978111" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/mAdView_4"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    ads:adSize="SMART_BANNER"
-                    ads:adUnitId="ca-app-pub-3940256099942544/6300978111" />
-            </LinearLayout>
+                android:layout_height="0dp"
+                android:minHeight="200dp"
+                android:orientation="vertical"
+                />
 
         </LinearLayout>
     </ScrollView>
